@@ -254,16 +254,30 @@
             opacity: 0.4;
         }
 
-        /* ─── Tiny footer ─── */
+        /* ─── Email / Footer ─── */
         .footer {
             margin-top: 18px;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 300;
             color: #b28aa4;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
-        .footer span {
+        .footer a {
+            color: #b28aa4;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            border-bottom: 1px dashed #d4b0c4;
+            padding-bottom: 2px;
+        }
+
+        .footer a:hover {
+            color: #8a5c7a;
+            border-bottom-color: #8a5c7a;
+        }
+
+        .footer .heart {
             display: inline-block;
             animation: pulseHeart 2s ease-in-out infinite;
         }
@@ -301,6 +315,9 @@
                 width: 200px;
                 height: 200px;
             }
+            .footer {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -322,7 +339,7 @@
     <!-- ✦ Main Card -->
     <div class="card">
 
-        <div class="icon">🕊️</div>
+        <div class="icon">😈</div>
 
         <h1>
             New Website<br />
@@ -336,17 +353,19 @@
         </div>
 
         <p class="subtitle">
-            ✦ <span>something sweet is brewing</span> ✦
+            ✦ <span>something wicked is brewing</span> ✦
         </p>
 
         <div class="divider"></div>
 
         <p class="message">
-            Thank you for your patience. Feel free to contact me at ink@witchfangs.com .
+            Thank you for your patience — we're putting together something devilishly good just for you.
         </p>
 
         <div class="footer">
-            <span>♡</span> &nbsp;come back soon&nbsp; <span>♡</span>
+            <span class="heart">♡</span> &nbsp;
+            <a href="mailto:ink@witchfangs.com">ink@witchfangs.com</a>
+            &nbsp; <span class="heart">♡</span>
         </div>
 
     </div>
