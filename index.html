@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ New Website Coming Soon</title>
+    <style>
+        /* ─── Reset & Base ─── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', 'Quicksand', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(145deg, #fce9f2 0%, #f8dce6 40%, #f3d9e8 100%);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ─── Floating Dreamy Orbs ─── */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.5;
+            pointer-events: none;
+            animation: floatOrb 12s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 300px;
+            height: 300px;
+            background: #f8b4d9;
+            top: -60px;
+            left: -80px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: #b8d9f0;
+            bottom: -120px;
+            right: -100px;
+            animation-delay: 4s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: #e8c1f0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 8s;
+            opacity: 0.3;
+        }
+
+        @keyframes floatOrb {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(30px, -40px) scale(1.1);
+            }
+        }
+
+        /* ─── Sparkles ─── */
+        .sparkle {
+            position: absolute;
+            font-size: 28px;
+            opacity: 0.4;
+            animation: twinkle 4s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+
+        .sparkle:nth-child(1) {
+            top: 12%;
+            left: 8%;
+            animation-delay: 0.2s;
+            font-size: 22px;
+        }
+        .sparkle:nth-child(2) {
+            top: 18%;
+            right: 12%;
+            animation-delay: 1.4s;
+            font-size: 32px;
+        }
+        .sparkle:nth-child(3) {
+            bottom: 22%;
+            left: 15%;
+            animation-delay: 0.8s;
+            font-size: 26px;
+        }
+        .sparkle:nth-child(4) {
+            bottom: 28%;
+            right: 10%;
+            animation-delay: 2.2s;
+            font-size: 20px;
+        }
+        .sparkle:nth-child(5) {
+            top: 45%;
+            left: 4%;
+            animation-delay: 3s;
+            font-size: 18px;
+        }
+        .sparkle:nth-child(6) {
+            top: 40%;
+            right: 4%;
+            animation-delay: 1.8s;
+            font-size: 24px;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.2;
+                transform: scale(0.9) rotate(0deg);
+            }
+            100% {
+                opacity: 0.8;
+                transform: scale(1.2) rotate(15deg);
+            }
+        }
+
+        /* ─── Card ─── */
+        .card {
+            position: relative;
+            z-index: 10;
+            max-width: 580px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 48px;
+            padding: 54px 44px 48px;
+            text-align: center;
+            box-shadow:
+                0 20px 60px rgba(215, 150, 190, 0.20),
+                0 8px 28px rgba(255, 220, 240, 0.30),
+                inset 0 1px 0 rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            animation: fadeUp 1.2s ease-out both;
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ─── Icon ─── */
+        .icon {
+            font-size: 64px;
+            margin-bottom: 12px;
+            display: inline-block;
+            animation: gentleWiggle 3s ease-in-out infinite;
+        }
+
+        @keyframes gentleWiggle {
+            0%,
+            100% {
+                transform: rotate(-4deg) scale(1);
+            }
+            50% {
+                transform: rotate(4deg) scale(1.05);
+            }
+        }
+
+        /* ─── Typography ─── */
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #4a2e3f;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #f6a7c1, #d48db4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            color: #6a4b5e;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .subtitle span {
+            font-weight: 300;
+            color: #8a6b7e;
+        }
+
+        /* ─── Decorative Divider ─── */
+        .divider {
+            width: 70px;
+            height: 3px;
+            margin: 22px auto 24px;
+            background: linear-gradient(90deg, transparent, #e8b4d0, #c9a0d4, transparent);
+            border-radius: 4px;
+        }
+
+        /* ─── Message ─── */
+        .message {
+            font-size: 18px;
+            font-weight: 300;
+            color: #5e4454;
+            line-height: 1.7;
+            max-width: 380px;
+            margin: 0 auto 28px;
+        }
+
+        /* ─── Small decorative dots ─── */
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #deb0cc;
+            opacity: 0.5;
+        }
+
+        .dots span:nth-child(2) {
+            background: #c4a8d9;
+            opacity: 0.6;
+            width: 10px;
+            height: 10px;
+        }
+        .dots span:nth-child(3) {
+            background: #f0bed8;
+            opacity: 0.4;
+        }
+
+        /* ─── Tiny footer ─── */
+        .footer {
+            margin-top: 18px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #b28aa4;
+            letter-spacing: 1px;
+        }
+
+        .footer span {
+            display: inline-block;
+            animation: pulseHeart 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseHeart {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 500px) {
+            .card {
+                padding: 36px 22px 32px;
+                border-radius: 32px;
+            }
+            h1 {
+                font-size: 27px;
+            }
+            .subtitle {
+                font-size: 17px;
+            }
+            .message {
+                font-size: 16px;
+            }
+            .icon {
+                font-size: 48px;
+            }
+            .orb-1,
+            .orb-2 {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✦ Floating Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- ✦ Sparkles -->
+    <div class="sparkle">✧</div>
+    <div class="sparkle">✦</div>
+    <div class="sparkle">✧</div>
+    <div class="sparkle">✦</div>
+    <div class="sparkle">✧</div>
+    <div class="sparkle">✦</div>
+
+    <!-- ✦ Main Card -->
+    <div class="card">
+
+        <div class="icon">🕊️</div>
+
+        <h1>
+            New Website<br />
+            <span class="highlight">on the Way</span>
+        </h1>
+
+        <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <p class="subtitle">
+            ✦ <span>something sweet is brewing</span> ✦
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            Thank you for your patience — we're putting together something lovely just for you.
+        </p>
+
+        <div class="footer">
+            <span>♡</span> &nbsp;come back soon&nbsp; <span>♡</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
